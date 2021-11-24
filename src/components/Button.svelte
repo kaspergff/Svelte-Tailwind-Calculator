@@ -6,7 +6,6 @@
 	export let sign;
 	export let type;
 
-
 	const buttonClicked = () => {
 		if (type === 'number') {
 
