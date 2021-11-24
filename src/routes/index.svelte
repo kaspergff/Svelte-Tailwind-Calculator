@@ -11,10 +11,10 @@
 		class="bg-gray-100 bg-white rounded-2xl shadow-xl border-4 border-gray-100 grid grid-cols-4 grid-rows-6 gap-3 grid-flow-row w-72 p-4"
 	>
 		<div
-			class="row-span-full col-span-4 rounded-2xl shadow-xl border-4 border-gray-100 flex flex-col place-items-end break-all content-around  pl-5"
+			class="row-span-full col-span-4 rounded-2xl shadow-xl border-4 border-gray-100 flex flex-col place-items-end break-all content-around  pr-3 pl-3"
 		>
-			<Display value={$sum} />
-			<Display value={$answer} />
+    <p>{$sum}</p>
+    <p>{$answer}</p>
 		</div>
 		<Button _class="btn-light-control" sign="AC" />
 		<Button _class="btn-light-control" sign="/" type="operator" />
