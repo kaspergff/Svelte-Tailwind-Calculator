@@ -50,6 +50,7 @@
       let lastNumber = $sum.split().pop()
       console.log(lastNumber);
       if (/^\d{1,}$/.test(lastNumber)) sum.update((n) => n + '.')
+      // if last character is an operator add "0."
       else if(lastNumber.trim().slice(-1) === 'x' || lastNumber.trim().slice(-1) === '/' || lastNumber.trim().slice(-1) === '+' || lastNumber.trim().slice(-1) === '-'){
         sum.update((n) => n + ' 0.')
       }
