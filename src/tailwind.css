@@ -6,10 +6,22 @@
   .btn-light-control {
     @apply bg-gray-200 shadow-xl rounded-full w-12 h-12 text-purple-800 font-bold flex justify-center items-center;
   }
+  .btn-dark-control {
+    @apply bg-gray-900 shadow-xl rounded-full ring-2 ring-black ring-opacity-60 w-12 h-12 text-yellow-600 font-bold flex justify-center items-center;
+  }
   .btn-light-control-jumbo {
     @apply bg-purple-800 shadow-xl rounded-full w-12 h-full text-white font-bold flex justify-center items-center;
+  }
+  .btn-dark-control-jumbo {
+    @apply bg-yellow-600 shadow-xl rounded-full w-12 h-full text-white font-bold flex justify-center items-center;
   }
   .btn-light-number {
     @apply bg-gray-200 shadow-xl rounded-full w-12 h-12 text-black font-bold flex justify-center items-center;
   }
+  .btn-dark-number {
+    @apply bg-gray-900 shadow-xl rounded-full w-12 h-12 text-white font-bold flex justify-center items-center;
+  }
+
+
+
 }

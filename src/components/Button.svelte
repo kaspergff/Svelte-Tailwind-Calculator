@@ -4,35 +4,48 @@
 
 	export let _class;
 	export let sign;
-	export let type;
+	export let type = ''
 
 	const buttonClicked = () => {
 		if (type === 'number') {
 
-			sum.update((n) => n + `${sign}`);
+			if ($answer) {
+				answer.set('');
+				sum.set(sign);
+			} else sum.update((n) => n + `${sign}`);
 
 		} else if (type === 'operator') {
+
 			let lastChar = $sum.trim().slice(-1);
-			if (isCharNumber(lastChar)) {
+      if($answer){
+        sum.set($answer)
+        answer.set('')
+        sum.update((n) => n + ` ${sign} `);
+      }else {
+        if (isCharNumber(lastChar)) {
 				sum.update((n) => n + ` ${sign} `);
 			} else if (!isCharNumber(lastChar)) {
 				sum.update((n) => n.slice(0, -2) + ` ${sign} `);
 			}
+
+
+      }
+
+
+
+
 		} else if (sign === 'AC') {
 			sum.set('');
 			answer.set('');
 		} else if (sign === 'DEL') {
 			sum.update((n) => n.slice(0, -1));
-		} else if (sign === '%') {
-			// TO DO
 		} else if (sign === ',') {
 			// TO DO
 		} else if (sign === '=') {
-      let ans = evaluate($sum.replace('x','*'))
-      if(ans){
-      answer.set(ans)
-      }
-
+			let ans = evaluate($sum.replace('x', '*'));
+			if (ans) {
+				answer.set(ans);
+			}
 		}
 	};
 
