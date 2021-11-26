@@ -17,7 +17,8 @@
     "prettier": "^2.4.1",
     "prettier-plugin-svelte": "^2.4.0",
     "svelte": "^3.42.6",
-    "tailwindcss": "^2.2.19"
+    "tailwindcss": "^2.2.19",
+    "@sveltejs/adapter-vercel": "next"
   },
   "type": "module",
   "dependencies": {
